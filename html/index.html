@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+  <script src="https://kit.fontawesome.com/76e7478913.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="app">
+    <transition name="fade">
+      <div class="container" v-if="show">
+        <div class="wrapper">
+          <div class="content">
+            <p class="dialog-text">
+              <span class="header">{{ped_name}}: </span> {{ped_question}}
+            </p>
+            <p @click="close" class="close-button">
+              X
+            </p>
+            <div class="buttons-container">
+              <div class="buttons">
+                <div v-for="(button,index) in buttons" v-if="button.triggerEvent != 'close' && button != null"
+                  class="button" :class="'button-'+ (index + 1)" @click="handleButtons($event, button )">
+                <i :class="button.icon"></i>
+
+                  {{button.text}}
+                </div>
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </transition>
+  </div>
+</body>
+<script src="app.js"></script>
+
+</html>

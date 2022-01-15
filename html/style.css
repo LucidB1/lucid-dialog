@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400&display=swap");
+
+@font-face {
+  font-family: Poppins-Regular;
+  src: url("Poppins-Regular.ttf");
+}
+
+* {
+  font-family: "Alegreya Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  z-index: 100000;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #191e259e;
+}
+
+.wrapper {
+  min-height: 190px;
+}
+
+.content {
+  position: relative;
+  margin: 20px auto 0;
+  text-align: center;
+}
+
+.dialog-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ddd;
+  padding: 10px 0 20px;
+}
+
+.buttons-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0.5vh;
+  top: 0;
+
+  width: 2vh;
+  height: 2vh;
+  color: white;
+  font-size: 16px;
+  border-radius: 50%;
+}
+
+.header {
+  color: rgb(0, 136, 255) !important;
+  color: #ddd;
+  font-size: 21px;
+}
+
+.ped-text {
+  font-size: 18px;
+
+  color: #ddd;
+}
+
+hr {
+  margin-bottom: 20px;
+}
+
+.fas {
+  margin-right: 5px;
+  line-height: normal;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  margin-top: 2vh;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.button {
+  color: #ddd;
+  width: 23%;
+  font-size: 18px;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.153);
+  border-radius: 5px;
+  margin: 7px;
+}
+
+.button:hover {
+  transition: 0.2s background-color ease;
+  background-color: rgba(255, 253, 253, 0.153);
+}
+
+.button:active {
+  transition: 0.2s background-color ease;
+  background-color: rgba(255, 253, 253, 0.384);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
